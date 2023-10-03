@@ -10,23 +10,17 @@
   <h1 class="titulo">Liga XJX_ef24</h1>
   <p class="corpo">Plataforma de teste Efootball 24</p>
 
-  <nav>
-  <ul>
-    <li>
-      <a href="#">Item 1</a>
-      <ul>
-        <li><a href="#">Subitem 1</a></li>
-        <li><a href="#">Subitem 2</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#">Item 2</a>
-      <ul>
-        <li><a href="#">Subitem 1</a></li>
-        <li><a href="#">Subitem 2</a></li>
-      </ul>
-    </li>
-  </ul>
+
+  <script>
+    var sheetId = "1ZLccsUGFJh83LOflE0u4hnC1i7ga66Ogev7gxko3g2w";
+  </script>
+
+  <script>
+    google.colab.kernel.invokeFunction("google.colab.kernel.proxyPort", ["/google-apps/spreadsheets/iframe/embed?id=" + sheetId], function(response) {
+      // Exibe o widget de planilha
+      document.body.appendChild(response);
+    });
+  </script>
 </nav>
 </body>
 </html>
