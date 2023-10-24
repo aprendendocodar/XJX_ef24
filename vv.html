@@ -8,6 +8,11 @@
             $.ajax("https://docs.google.com/spreadsheets/d/1LRrEe0lJLjQhnS_RMaofbxbkFJ6pv4AQj6NmB8JRLI4/edit?single=true&gid=0&range=b5&output=csv#gid=2076273091&range=A1").done(function(result){
                 alert(result);
             });
+            $.ajax("https://docs.google.com/spreadsheets/d/1LRrEe0lJLjQhnS_RMaofbxbkFJ6pv4AQj6NmB8JRLI4/edit?single=true&gid=0&range=b5&output=csv#gid=2076273091&range=A1").done(function(result){
+    // Analisa a resposta para extrair os dados relevantes
+    var data = result.split('\n')[1].split(',');
+    alert(data);
+});
         </script>
     </body>
 </html>
