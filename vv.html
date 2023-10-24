@@ -39,25 +39,21 @@
       #interface {
       height: 100vh; /* Ocupa toda a altura da tela */
       height: 100vh;
-      border: solid 5px blueviolet;
       background-color: black;
       color: white;
       display: flex; /* Organiza os filhos em uma linha */
       flex-direction: column; /* Muda a direção para coluna */
     }
 
-    #cabecalho {
-      display: flex; /* Organiza os filhos em uma linha */
-    }
-
     #cabecalho > div {
+      display: flex; /* Organiza os filhos em uma linha */
       flex: 1; /* Faz cada div ocupar um espaço igual */
-      border: 1px solid black; /* Adiciona uma borda para visualização */
+      border: solid 5px blueviolet;
     }
 
     #corpo {
       flex: 1; /* Ocupa o resto do espaço disponível */
-      border: 1px solid black; /* Adiciona uma borda para visualização */
+      border: solid 5px blueviolet; /* Adiciona uma borda para visualização */
     }
 
 
