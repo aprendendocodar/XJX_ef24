@@ -15,7 +15,8 @@
     $(function() {
     function fetchData() {
       $.ajax({
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1LRrEe0lJLjQhnS_RMaofbxbkFJ6pv4AQj6NmB8JRLI4/values/rublos!A1:D1?key=AIzaSyDMXZE54ECFqwgTzouSo1AsXU9Odo4gAqE" 
+        var apiKey = process.env.GOOGLE_SHEETS_API_KEY;
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1LRrEe0lJLjQhnS_RMaofbxbkFJ6pv4AQj6NmB8JRLI4/values/rublos!A1:D1?key="+apiKey 
       }).done(function(result) {
         //console.log(result); // Mostra o resultado no console
         
