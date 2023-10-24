@@ -17,3 +17,7 @@
       flex: 1; /* Ocupa o resto do espaço disponível */
       border: 1px solid black; /* Adiciona uma borda para visualização */
     }
+
+body{
+    margin: 0;
+}
