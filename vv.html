@@ -19,8 +19,8 @@
         console.log(result); // Mostra o resultado no console
         console.log(result.values[0][0]);
         console.log(result.values[0][1]);
-        $('#content').html(JSON.stringify(result)); // Mostra o resultado na página result.values[0][1]
-        
+        $('#content').html(result.values[0][0]); // Mostra o resultado na página result.values[0][1]
+        $('#content2').html(result.values[0][1]);
       });
 
     });
