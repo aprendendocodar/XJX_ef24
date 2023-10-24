@@ -6,11 +6,11 @@
 <body>
   <div id="interface"><!-- ocupará toda a tela visivel-->
     <div id="cabecalho"><!-- vai agrupar os 4 contents um do lado do outro-->
-      <div id="content1" class="content"></div>
-      <div id="content2" class="content1"></div>
+      <div id="content1" class="content"><h1 id="u1"></h1></div>
+      <div id="content2" class="content1"><h1 id="r1"></h1></div>
       <div id="content0"></div>
-      <div id="content3" class="content1"></div>
-      <div id="content4" class="content"></div>
+      <div id="content3" class="content1"><h1 id="r2"></h1></div>
+      <div id="content4" class="content"><h1 id="u2"></h1></div>
     </div>
     <div id="corpo"><!-- ocupará o resto da página-->
     </div> 
@@ -24,10 +24,10 @@
       }).done(function(result) {
         //console.log(result); // Mostra o resultado no console
         
-        $('#content1').html(result.values[0][0]); // Mostra o resultado na página result.values[0][1]
-        $('#content2').html(result.values[0][1]);
-        $('#content3').html(result.values[0][2]);
-        $('#content4').html(result.values[0][3]);
+        $('#u1').html(result.values[0][0]); // Mostra o resultado na página result.values[0][1]
+        $('#r1').html(result.values[0][1]);
+        $('#r2').html(result.values[0][2]);
+        $('#u2').html(result.values[0][3]);
       });}
 
   fetchData(); // Chama a função uma vez para pegar os dados iniciais
