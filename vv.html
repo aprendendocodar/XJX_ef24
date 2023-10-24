@@ -4,7 +4,7 @@
 
 <head>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css">-->
 </head>
 
 <body>
@@ -39,7 +39,32 @@
   
 
   </script>
+<style>
+      #interface {
+      height: 100vh; /* Ocupa toda a altura da tela */
+      display: flex; /* Organiza os filhos em uma linha */
+      flex-direction: column; /* Muda a direção para coluna */
+    }
 
+    #cabecalho {
+      display: flex; /* Organiza os filhos em uma linha */
+    }
+
+    #cabecalho > div {
+      flex: 1; /* Faz cada div ocupar um espaço igual */
+      border: 1px solid black; /* Adiciona uma borda para visualização */
+    }
+
+    #corpo {
+      flex: 1; /* Ocupa o resto do espaço disponível */
+      border: 1px solid black; /* Adiciona uma borda para visualização */
+    }
+
+
+body{
+    margin: 0;
+}
+</style>
 </body>
 
 </html>
