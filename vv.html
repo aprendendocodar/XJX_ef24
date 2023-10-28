@@ -13,7 +13,7 @@
       <div id="content4" class="content"><h1 id="u2"></h1></div>
     </div>
     <div id="corpo"><!-- ocupará o resto da página-->
-    <div id="carteira"><h1 id="car"></h1></div>
+    <div id="carteira"><h2 id="car"></h2></div>
     </div> 
   </div>
   <script>
@@ -31,7 +31,7 @@
         $('#r1').html(result.values[0][1]);
         $('#r2').html(result.values[0][2]);
         $('#u2').html(result.values[0][3]);
-        $('#car').html(carteira);
+        $('#car').html("Carteira "+carteira);
       });}
 
   fetchData(); // Chama a função uma vez para pegar os dados iniciais
