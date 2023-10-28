@@ -45,7 +45,8 @@ function enviarParaPlanilha() {
 
   var url = 'https://script.google.com/macros/s/AKfycbxz1r0GXNrvN2OIO7HCyLDt9U5uRMa34cZjg0AvDumLNd5tImci-S4hBmYdgJPospBzdg/exec'
 
-  var dados = {myVariable: cont}; // envie sua variável aqui
+  var dados = {myVariable: carteira}; // envie sua variável aqui
+  carteira=0;
 
   $.ajax({
     url: url,
