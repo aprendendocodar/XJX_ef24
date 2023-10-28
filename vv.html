@@ -57,7 +57,10 @@ function enviarParaPlanilha() {
 
     
 enviarParaPlanilha()
-    
+
+    $.getJSON('http://ipinfo.io', function(data) {
+  console.log(data);
+});
 
   </script>
 <style>
