@@ -6,11 +6,11 @@
 <body>
   <div id="interface"><!-- ocupará toda a tela visivel-->
     <div id="cabecalho"><!-- vai agrupar os 4 contents um do lado do outro-->
-      <div id="content1" class="content"><h1 id="u1"></h1><h5 id="">Clique para apostar na vitória</h5><h5 id="tap">Total de apostas</h5><h5 id="">Prêmio</h5></div>
+      <div id="content1" class="content"><h1 id="u1"></h1><h5 id="">Clique para apostar na vitória</h5><h5 id="tap1">Total de apostas</h5><h5 id="pr1">Prêmio</h5></div>
       <div id="content2" class="content1"><h1 id="r1"></h1></div>
       <div id="content0"></div>
       <div id="content3" class="content1"><h1 id="r2"></h1></div>
-      <div id="content4" class="content"><h1 id="u2"></h1><h5 id="">Clique para apostar na vitória</h5><h5 id="">Total de apostas</h5><h5 id="">Prêmio</h5></div>
+      <div id="content4" class="content"><h1 id="u2"></h1><h5 id="">Clique para apostar na vitória</h5><h5 id="tap2">Total de apostas</h5><h5 id="pr2">Prêmio</h5></div>
     </div>
     <div id="corpo"><!-- ocupará o resto da página-->
     <div id="carteira"><h2 id="car"></h2></div>
@@ -30,7 +30,8 @@
         $('#r2').html(result.values[0][2]);
         $('#u2').html(result.values[0][3]);
 
-        $('#tap').html(result.values[1][1]);
+        $('#tap1').html("Total de apostas "+result.values[1][1]);
+        $('#pr1').html("Prêmio "+result.values[2][1]);
         $('#car').html("Carteira "+carteira);
       });}
 
