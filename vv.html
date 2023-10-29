@@ -6,7 +6,7 @@
 <body>
   <div id="interface"><!-- ocupará toda a tela visivel-->
     <div id="cabecalho"><!-- vai agrupar os 4 contents um do lado do outro-->
-      <div id="content1" class="content"><h1 id="u1"></h1><h5 id="">Clique para apostar na vitória</h5><h5 id="">Total de apostas</h5><h5 id="">Prêmio</h5></div>
+      <div id="content1" class="content"><h1 id="u1"></h1><h5 id="">Clique para apostar na vitória</h5><h5 id="tap">Total de apostas</h5><h5 id="">Prêmio</h5></div>
       <div id="content2" class="content1"><h1 id="r1"></h1></div>
       <div id="content0"></div>
       <div id="content3" class="content1"><h1 id="r2"></h1></div>
@@ -23,14 +23,14 @@
     function fetchData() {
       carteira++
       $.ajax({
-        url: "https://sheets.googleapis.com/v4/spreadsheets/1LRrEe0lJLjQhnS_RMaofbxbkFJ6pv4AQj6NmB8JRLI4/values/rublos!A1:D1?key="+apiKey 
+        url: "https://sheets.googleapis.com/v4/spreadsheets/1LRrEe0lJLjQhnS_RMaofbxbkFJ6pv4AQj6NmB8JRLI4/values/rublos!A1:D3?key="+apiKey 
       }).done(function(result) {
-        //console.log(result); // Mostra o resultado no console
-        
-        $('#u1').html(result.values[0][0]); // Mostra o resultado na página result.values[0][1]
+        $('#u1').html(result.values[0][0]); // Mostra o resultado na página 
         $('#r1').html(result.values[0][1]);
         $('#r2').html(result.values[0][2]);
         $('#u2').html(result.values[0][3]);
+
+        $('#tap').html(result.values[1][1]);
         $('#car').html("Carteira "+carteira);
       });}
 
