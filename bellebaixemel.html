@@ -15,6 +15,8 @@
 
 </div>
 </body>
+
+
 <style>
 body {
     background-color: #ADD8E6; /* Cor do pingo da chuva */
@@ -38,5 +40,19 @@ body {
     height: 100%;
 }
 
+/* Quando a tela tem 900px ou menos, mude a direção do flex para coluna */
+@media (max-width: 900px) {
+    #interface {
+        flex-direction: column;
+    }
+    #menu {
+    width: 100%;
+    height: 20%;
+}
+    #foto {
+    width: 100%;
+    height: 80%;
+    }
+}
 </style>
 </html>
